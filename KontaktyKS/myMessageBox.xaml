@@ -1,0 +1,24 @@
+﻿<Window x:Class="SerwisMaster.MyMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="myMessageBox"  WindowStyle="None" Background="#00000000" ResizeMode="NoResize" AllowsTransparency="True" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_PreviewKeyDown" Height="272" Width="460">
+    <Grid Height="231" Width="403">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Stretch" Name="rectangle1" VerticalAlignment="Stretch" Fill="#FF3445B2" Grid.RowSpan="2" >
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="30" Opacity="1" Direction="0" ShadowDepth="0" />
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <StackPanel x:Name="messageBoxTitleStackPanel" Margin="10">
+            <Label Name="messageBoxTitleLabel" Foreground="White" Content="" FontFamily="Roboto" FontSize="14pt" FontWeight="Medium"/>
+            <TextBox Margin="10" Name="messageText" TextWrapping="Wrap" Text="asdasdasdsadadasdasdas" Foreground="White" MaxWidth="310" MaxHeight="300" FontFamily="/SerwisMaster;component/Fonts/#Roboto" FontSize="13.333" Height="92" ScrollViewer.HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" Background="{x:Null}" VerticalScrollBarVisibility="Auto" IsReadOnly="True" BorderBrush="{x:Null}" SelectionBrush="#FFC4E2FF" Template="{DynamicResource MyMessageBoxTextBoxControlTemplate}"/>
+        </StackPanel>
+        <StackPanel Height="auto" Margin="0,0,10,10" Name="buttonsStackPanel" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
+        </StackPanel>
+        <DockPanel Height="46" LastChildFill="False" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Background="#009E4040"/>
+    </Grid>
+</Window>
